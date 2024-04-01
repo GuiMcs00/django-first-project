@@ -1,0 +1,16 @@
+<section>
+    <table border="5">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>email</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.id_usuario}}</td>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>

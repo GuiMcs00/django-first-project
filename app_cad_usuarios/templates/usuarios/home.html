@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastre-me!</title>
+    <style>
+        nav {
+            background-color: aquamarine;
+            font-size: 20px;
+            padding: 15px;
+            margin: 0;
+            width: 100%;
+        }
+
+        #contacts {
+            height: 100vh;
+            text-align: center;
+            padding: 50px;
+            font-size: 1.5rem;
+            padding: 15px;
+        }
+
+        #contacts label {
+            display: block;
+            padding-bottom: 15px;
+        }
+
+        #contacts input,
+        textarea {
+            width: 500px;
+            font-size: 1.2rem;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+
+        }
+
+        #contacts button {
+            display: block;
+            padding: 20px 50px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: #18627f;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1 style="font: arial;">Navbar</h1>
+    </nav>
+    <form action="{% url 'listagem_usuarios' %}" method="post">
+        {% csrf_token %}
+        <section id="contacts">
+            <h1>Cadastre-me</h1>
+            <label>Nome</label>
+            <input type="text" name="nome">
+            <label>E-mail</label>
+            <input type="email" name="email">
+
+            <button type="submit">Enviar</button>
+
+        </section>
+    </form>
+
+</body>
+
+</html>
